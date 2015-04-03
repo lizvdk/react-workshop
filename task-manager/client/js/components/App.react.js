@@ -43,17 +43,15 @@ var App = React.createClass({
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <TaskList categories={this.state.categories}
-                                tasks={this.state.tasks} />
+                            <TaskList categories={this.state.categories} tasks={this.state.tasks} />
                         </div>
-
                         <div className="col-md-6">
                             <CategoryForm categories={this.state.categories} />
-                            <TaskForm categories={this.state.categories} />
+                            <TaskForm categories={this.state.categories} tasks={this.state.tasks} />
 
                             <hr/>
 
-                            <RemoveCompletedTasksButton />
+                            <RemoveCompletedTasksButton tasks={this.state.tasks} />
                         </div>
                     </div>
                 </div>
